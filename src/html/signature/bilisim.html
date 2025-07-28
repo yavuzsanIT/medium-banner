@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Email Signature</title>
+
+    <script
+      type="text/javascript"
+      src="../../js/signature_functions.js"
+    ></script>
+
+    <style>
+      /* === Genel Ayarlar === */
+      body {
+        font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+        font-size: 10pt;
+        color: #3c3c3b;
+        margin: 0;
+        padding: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      a {
+        color: #1793d2;
+        text-decoration: none;
+      }
+
+      img {
+        border: 0;
+        display: inline-block;
+      }
+
+      /* === Layout === */
+      .signature-wrapper {
+        width: 450px;
+      }
+
+      .logo {
+        width: 148px;
+        height: 148px;
+      }
+
+      .divider {
+        width: 13px;
+        height: 86px;
+      }
+
+      .content {
+        width: 300px;
+        vertical-align: top;
+        padding-left: 10px;
+      }
+
+      /* === Metin Grupları === */
+      .full-name {
+        font-weight: bold;
+        font-size: 15pt;
+        line-height: 16px;
+        padding-bottom: 5px;
+      }
+
+      .title {
+        font-weight: normal;
+        font-size: 10pt;
+        line-height: 16px;
+        padding-bottom: 5px;
+      }
+
+      .contact,
+      .address,
+      .email-web {
+        font-size: 9pt;
+        line-height: 14px;
+        padding-bottom: 3px;
+      }
+
+      .icon-text {
+        vertical-align: middle;
+        height: 18px;
+        width: 18px;
+        margin-right: 4px;
+        padding-bottom: 5px;
+      }
+
+      /* === Sosyal Medya === */
+      .social-icons {
+        padding-top: 15px;
+      }
+
+      .social-icons img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+
+      /* === Banner === */
+      .banner {
+        width: 430px;
+        height: auto;
+        margin-top: 16px;
+      }
+    </style>
+
+    <script>
+      window.onload = function () {
+        const map = {
+          "{first name}": bilisim.firstName,
+          "{last name}": bilisim.lastName,
+          "{prefix}": bilisim.prefix,
+          "{title}": bilisim.title,
+          "{phone}": bilisim.phone,
+          "{mobile}": bilisim.mobile,
+          "{email}": bilisim.email,
+          "{website}": bilisim.website,
+          "{address1}": bilisim.address1,
+          "{address2}": bilisim.address2,
+          "{facebookURL}": bilisim.facebookURL,
+          "{linkedinURL}": bilisim.linkedinURL,
+          "{twitterURL}": bilisim.twitterURL,
+          "{youtubeURL}": bilisim.youtubeURL,
+          "{instagramURL}": bilisim.instagramURL,
+          "{pinterestURL}": bilisim.pinterestURL,
+        };
+
+        const sourceHtml = document.body.innerHTML;
+        let updatedHtml = sourceHtml;
+        Object.entries(map).forEach(([key, value]) => {
+          updatedHtml = updatedHtml.replaceAll(key, value);
+        });
+        document.body.innerHTML = updatedHtml;
+      };
+    </script>
+  </head>
+
+  <body>
+    <table class="signature-wrapper" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <a href="logo link URL" target="_blank">
+            <img class="logo" src="pics/logo.jpg" alt="Logo" />
+          </a>
+        </td>
+        <td style="text-align: center">
+          <img class="divider" src="pics/line.png" alt="Divider" />
+        </td>
+        <td class="content">
+          <div class="full-name">{first name} {last name} {prefix}</div>
+          <div class="title">{title}</div>
+          <div class="email-web">
+            <img src="pics/email.svg" class="icon-text" alt="Email" />
+            <a href="mailto:{email}">{email}</a><br />
+            <img src="pics/web.svg" class="icon-text" alt="Website" />
+            <a href="http://{website}" target="_blank">{website}</a>
+          </div>
+          <div class="contact">
+            <img src="pics/phn.svg" class="icon-text" alt="Phone" style="width: 16px; height: 16px;"/>{phone} |
+            {mobile}
+          </div>
+          <div class="address">
+            <img src="pics/lctn.svg" class="icon-text" alt="Address" />
+            {address1}<br />
+            {address2}
+          </div>
+          <div class="social-icons">
+            <a href="{facebookURL}" target="_blank" 
+              ><img src="pics/fb.svg" alt="Facebook" style="width: 22px; height: 22px;"
+            /></a>
+            <a href="{linkedinURL}" target="_blank"
+              ><img src="pics/ln.svg" alt="LinkedIn" style="width: 22px; height: 22px;"
+            /></a>
+            <a href="{twitterURL}" target="_blank"
+              ><img src="pics/x1.svg" alt="Twitter" style="width: 21px; height: 21px;"
+            /></a>
+            <a href="{youtubeURL}" target="_blank"
+              ><img src="pics/yt.svg" alt="YouTube"
+            /></a>
+            <a href="{instagramURL}" target="_blank"
+              ><img src="pics/it.svg" alt="Instagram"
+            /></a>
+            
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <a href="banner link URL" target="_blank" rel="noopener">
+            <img class="banner" src="pics/banner.png" alt="Banner" />
+          </a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
