@@ -27,7 +27,7 @@ const bilisim = {
     ln_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "ln.png",
     x_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "x1.png",
     yt_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "yt.png",
-    it_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "it.svg",
+    it_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "it.png",
     maps_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "maps.png",
     //tt_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "tt.svg",
     banner_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "banner.png",
