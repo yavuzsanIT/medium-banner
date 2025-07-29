@@ -31,6 +31,6 @@ const bilisim = {
     maps_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "maps.svg",
     tt_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "tt.svg",
     banner_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "banner.png",
-    logo_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "logo.jpg",
+    logo_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "logo.png",
     line_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "line.png",
 };
