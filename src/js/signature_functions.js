@@ -8,7 +8,7 @@ const bilisim = {
     phone: "+90 332 239 22 00",
     website: "www.yavuzsan.com",
     address1: "Konya Organize San. Böl. Kuddusi Cad. No:16",
-    address2: "Selçuklu / Konya / Türkiye",
+    address2: "Selçuklu / Konya / TÜRKİYE",
     facebookURL: "https://www.facebook.com/yavuzsanotomotiv",
     linkedinURL: "https://www.linkedin.com/company/yavuzsan-otomoti%CC%87v/",
     twitterURL: "https://x.com/yavuzsan",

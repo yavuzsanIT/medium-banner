@@ -56,6 +56,7 @@
 
       /* === Metin Grupları === */
       .full-name {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
         font-weight: bold;
         font-size: 15pt;
         line-height: 16px;
@@ -63,6 +64,8 @@
       }
 
       .title {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+        font-style: italic;
         font-weight: normal;
         font-size: 10pt;
         line-height: 16px;
@@ -89,7 +92,7 @@
       .contact > div,
       .address > div {
         display: flex;
-        align-items: center;
+        align-items:self-end;
       }
 
       .address-line {
@@ -148,6 +151,7 @@
           "{youtubeURL}": bilisim.youtubeURL,
           "{instagramURL}": bilisim.instagramURL,
           "{pinterestURL}": bilisim.pinterestURL,
+          "{lctn_url}": bilisim.lctn_url,
           "{email_svg_url}": bilisim.email_svg_url,
           "{web_svg_url}": bilisim.web_svg_url,
           "{phn_svg_url}": bilisim.phn_svg_url,
@@ -215,7 +219,7 @@
 
           <div class="address">
             <div>
-              <a href="{lctn_url}"">
+              <a href="{lctn_url}" target="_blank">
                 <img src="{lctn_svg_url}" class="icon-text" alt="Address" />
               </a>
               <span>{address1}</span>
