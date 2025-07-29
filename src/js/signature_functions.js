@@ -14,6 +14,7 @@ const bilisim = {
     twitterURL: "https://x.com/yavuzsan",
     youtubeURL: "https://www.youtube.com/@yavuzsanotomotiv1",
     instagramURL: "https://www.instagram.com/yavuzsanotomotiv",
+    lctn_url: "Büyükkayacık OSB, Kuddusi Cd. NO:16, 42050 KONYA 3.ORGANİZE SANAYİ BÖLGESİ/Selçuklu/Konya",
     //pinterestURL: "https://pinterest.com/yavuzsan",
     mobile: "+90 332 239 22 00",
 

@@ -186,17 +186,24 @@
           <img class="divider" src="{line_url}" alt="Divider" />
         </td>
         <td class="content">
+
           <div class="full-name">{first name} {last name} {prefix}</div>
           <div class="title">{title}</div>
+
           <div class="email-web">
+
             <div>
+              <a href="mailto:{email}">
               <img src="{email_svg_url}" class="icon-text" alt="Email" />
-              <a href="mailto:{email}">{email}</a>
+              {email}</a>
             </div>
+
             <div>
+              <a href="http://{website}" target="_blank">
               <img src="{web_svg_url}" class="icon-text icon-web" alt="Website" />
-              <a href="http://{website}" target="_blank">{website}</a>
+              {website}</a>
             </div>
+
           </div>
 
           <div class="contact">
@@ -208,7 +215,9 @@
 
           <div class="address">
             <div>
-              <img src="{lctn_svg_url}" class="icon-text" alt="Address" />
+              <a href="{lctn_url}"">
+                <img src="{lctn_svg_url}" class="icon-text" alt="Address" />
+              </a>
               <span>{address1}</span>
             </div>
             <div class="address-line address-indent">
