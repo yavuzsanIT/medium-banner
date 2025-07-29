@@ -123,6 +123,20 @@
           "{youtubeURL}": bilisim.youtubeURL,
           "{instagramURL}": bilisim.instagramURL,
           "{pinterestURL}": bilisim.pinterestURL,
+          "{email_svg_url}": bilisim.email_svg_url,
+          "{web_svg_url}": bilisim.web_svg_url,
+          "{phn_svg_url}": bilisim.phn_svg_url,
+          "{lctn_svg_url}": bilisim.lctn_svg_url,
+          "{maps_svg_url}": bilisim.maps_svg_url,
+          "{tt_svg_url}": bilisim.tt_svg_url,
+          "{fb_svg_url}": bilisim.fb_svg_url,
+          "{ln_svg_url}": bilisim.ln_svg_url,
+          "{x_svg_url}": bilisim.x_svg_url,
+          "{yt_svg_url}": bilisim.yt_svg_url,
+          "{it_svg_url}": bilisim.it_svg_url,
+          "{banner_url}": bilisim.banner_pic_url,
+          "{logo_url}": bilisim.logo_pic_url,
+          "{line_url}": bilisim.line_pic_url,
         };
 
         const sourceHtml = document.body.innerHTML;
@@ -140,45 +154,45 @@
       <tr>
         <td>
           <a href="logo link URL" target="_blank">
-            <img class="logo" src="pics/logo.jpg" alt="Logo" />
+            <img class="logo" src="{logo_url}" alt="Logo" />
           </a>
         </td>
         <td style="text-align: center">
-          <img class="divider" src="pics/line.png" alt="Divider" />
+          <img class="divider" src="{line_url}" alt="Divider" />
         </td>
         <td class="content">
           <div class="full-name">{first name} {last name} {prefix}</div>
           <div class="title">{title}</div>
           <div class="email-web">
-            <img src="pics/email.svg" class="icon-text" alt="Email" />
+            <img src="{email_svg_url}" class="icon-text" alt="Email" />
             <a href="mailto:{email}">{email}</a><br />
-            <img src="pics/web.svg" class="icon-text" alt="Website" />
+            <img src="{web_svg_url}" class="icon-text" alt="Website" />
             <a href="http://{website}" target="_blank">{website}</a>
           </div>
           <div class="contact">
-            <img src="pics/phn.svg" class="icon-text" alt="Phone" style="width: 16px; height: 16px;"/>{phone} |
+            <img src="{phn_svg_url}" class="icon-text" alt="Phone" style="width: 16px; height: 16px;"/>{phone} |
             {mobile}
           </div>
           <div class="address">
-            <img src="pics/lctn.svg" class="icon-text" alt="Address" />
+            <img src="{lctn_svg_url}" class="icon-text" alt="Address" />
             {address1}<br />
             {address2}
           </div>
           <div class="social-icons">
             <a href="{facebookURL}" target="_blank" 
-              ><img src="pics/fb.svg" alt="Facebook" style="width: 22px; height: 22px;"
+              ><img src="{fb_svg_url}" alt="Facebook" style="width: 22px; height: 22px;"
             /></a>
             <a href="{linkedinURL}" target="_blank"
-              ><img src="pics/ln.svg" alt="LinkedIn" style="width: 22px; height: 22px;"
+              ><img src="{ln_svg_url}" alt="LinkedIn" style="width: 22px; height: 22px;"
             /></a>
             <a href="{twitterURL}" target="_blank"
-              ><img src="pics/x1.svg" alt="Twitter" style="width: 21px; height: 21px;"
+              ><img src="{x_svg_url}" alt="Twitter" style="width: 21px; height: 21px;"
             /></a>
             <a href="{youtubeURL}" target="_blank"
-              ><img src="pics/yt.svg" alt="YouTube"
+              ><img src="{yt_svg_url}" alt="YouTube"
             /></a>
             <a href="{instagramURL}" target="_blank"
-              ><img src="pics/it.svg" alt="Instagram"
+              ><img src="{it_svg_url}" alt="Instagram"
             /></a>
             
           </div>
@@ -187,7 +201,7 @@
       <tr>
         <td colspan="3">
           <a href="banner link URL" target="_blank" rel="noopener">
-            <img class="banner" src="pics/banner.png" alt="Banner" />
+            <img class="banner" src="{banner_url}" alt="Banner" />
           </a>
         </td>
       </tr>

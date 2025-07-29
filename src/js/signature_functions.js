@@ -15,6 +15,21 @@ const bilisim = {
     youtubeURL: "https://www.youtube.com/@yavuzsanotomotiv1",
     instagramURL: "https://www.instagram.com/yavuzsanotomotiv",
     //pinterestURL: "https://pinterest.com/yavuzsan",
-    mobile: "+90 332 239 22 00"
-};
+    mobile: "+90 332 239 22 00",
 
+    pt_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "pt.svg",
+    email_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "email.svg",
+    web_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "web.svg",
+    phn_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "phn.svg",
+    lctn_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "lctn.svg",
+    fb_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "fb.svg",
+    ln_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "ln.svg",
+    x_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "x1.svg",
+    yt_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "yt.svg",
+    it_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "it.svg",
+    maps_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "maps.svg",
+    tt_svg_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "tt.svg",
+    banner_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "banner.png",
+    logo_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "logo.jpg",
+    line_pic_url: "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/" + "line.png",
+};
