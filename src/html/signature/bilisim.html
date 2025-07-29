@@ -3,14 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Email Signature</title>
-
-    <script
-      type="text/javascript"
-      src="../../js/signature_functions.js"
-    ></script>
-
     <style>
-      /* === Genel Ayarlar === */
+      /* Genel Ayarlar - Inline style'a taşınamayacak genel kurallar burada kalabilir */
       body {
         font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
         font-size: 10pt;
@@ -18,121 +12,70 @@
         margin: 0;
         padding: 0;
       }
-
       table {
         border-collapse: collapse;
       }
-
       a {
-        color: #1793d2;
-        text-decoration: none;
+        color: #1793d2; /* Bağlantı renklerini inline'a da taşıyın */
+        text-decoration: none; /* Bağlantı alt çizgilerini inline'a da taşıyın */
       }
-
       img {
         border: 0;
-        display: inline-block;
-      }
-
-      /* === Layout === */
-      .signature-wrapper {
-        width: 450px;
-      }
-
-      .logo {
-        width: 148px;
-        height: 148px;
-      }
-
-      .divider {
-        width: 13px;
-        height: 86px;
-      }
-
-      .content {
-        width: 300px;
-        vertical-align: top;
-        padding-left: 10px;
-      }
-
-      /* === Metin Grupları === */
-      .full-name {
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
-        font-weight: bold;
-        font-size: 15pt;
-        line-height: 16px;
-        padding-bottom: 5px;
-      }
-
-      .title {
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
-        font-style: italic;
-        font-weight: normal;
-        font-size: 10pt;
-        line-height: 16px;
-        padding-bottom: 5px;
-      }
-
-      .contact,
-      .address,
-      .email-web {
-        font-size: 9pt;
-        line-height: 14px;
-        padding-bottom: 3px;
-      }
-
-      .email-web,
-      .contact,
-      .address {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .email-web > div,
-      .contact > div,
-      .address > div {
-        display: flex;
-        align-items:self-end;
-      }
-
-      .address-line {
-        display: flex;
-        align-items: center;
-      }
-
-      .address-indent {
-        padding-left: 26px; /* İkon + margin-right kadar boşluk */
-      }
-
-      .icon-text {
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
-        margin-right: 6px;
-        margin-bottom: 2px; /* ikonlar yazıya daha yakın dursun */
-        object-fit: contain; /* orantılı boyut */
-      }
-
-      /* === Sosyal Medya === */
-      .social-icons {
-        padding-top: 15px;
-      }
-
-      .social-icons img {
-        width: 20px;
-        height: 20px;
-        margin-right: 5px;
-      }
-
-      /* === Banner === */
-      .banner {
-        width: 430px;
-        height: auto;
-        margin-top: 16px;
+        /* display: inline-block; kaldırıldı, inline style ile ayarlanacak */
       }
     </style>
 
     <script>
+      // Bu script bloğu e-posta istemcilerinde çalışmayacaktır.
+      // Bu verilerin doğrudan HTML'e basılması gerekmektedir.
+      // Örn: Eğer Node.js kullanıyorsanız, bu veriyi şablon motorunuzla HTML'e render edin.
+      const bilisim = {
+        firstName: "Burak",
+        lastName: "ARIKBOĞA",
+        prefix: "(Mr.)",
+        title: "BT Uzmanı / IT Specialist",
+        company: "YAVUZSAN BRAKE DISC & DRUM & PAD",
+        email: "bilisim@yavuzsan.com",
+        phone: "+90 332 239 22 00",
+        website: "www.yavuzsan.com",
+        address1: "Konya Organize San. Böl. Kuddusi Cad. No:16",
+        address2: "Selçuklu / Konya / TÜRKİYE",
+        facebookURL: "https://www.facebook.com/yavuzsanotomotiv",
+        linkedinURL:
+          "https://www.linkedin.com/company/yavuzsan-otomoti%CC%87v/",
+        twitterURL: "https://x.com/yavuzsan",
+        youtubeURL: "https://www.youtube.com/@yavuzsanotomotiv1", // Bu URL'i gerçek bir YouTube URL'i ile değiştirin
+        instagramURL: "https://www.instagram.com/yavuzsanotomotiv",
+        lctn_url: "https://maps.app.goo.gl/nDWMqqSnj4Xv8cXSA", // Bu URL'i gerçek bir lokasyon URL'i ile değiştirin
+        mobile: "+90 332 239 22 00",
+        email_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/email.png",
+        web_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/web.png",
+        phn_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/phn.png",
+        lctn_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/lctn.png",
+        fb_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/fb.png",
+        ln_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/ln.png",
+        x_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/x1.png",
+        yt_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/yt.png",
+        it_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/it.png",
+        banner_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/banner.png",
+        logo_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/logo.png",
+        line_pic_url:
+          "https://raw.githubusercontent.com/yavuzsanIT/medium-banner/master/src/html/signature/pics/line.png",
+      };
+
+      // Bu JavaScript kodu, HTML'i kopyalamadan önce yer tutucuları gerçek değerlerle değiştirmek için kullanılabilir.
+      // Ancak, kullanıcı tarayıcıdan kopyalayıp Outlook'a yapıştırıyorsa, JavaScript'in tarayıcıda çalıştığından emin olunmalı.
       window.onload = function () {
         const map = {
           "{first name}": bilisim.firstName,
@@ -150,14 +93,13 @@
           "{twitterURL}": bilisim.twitterURL,
           "{youtubeURL}": bilisim.youtubeURL,
           "{instagramURL}": bilisim.instagramURL,
-          "{pinterestURL}": bilisim.pinterestURL,
+          "{pinterestURL}": bilisim.pinterestURL, // Eğer kullanılıyorsa
           "{lctn_url}": bilisim.lctn_url,
           "{email_pic_url}": bilisim.email_pic_url,
           "{web_pic_url}": bilisim.web_pic_url,
           "{phn_pic_url}": bilisim.phn_pic_url,
           "{lctn_pic_url}": bilisim.lctn_pic_url,
           "{maps_pic_url}": bilisim.maps_pic_url,
-          "{tt_pic_url}": bilisim.tt_pic_url,
           "{fb_pic_url}": bilisim.fb_pic_url,
           "{ln_pic_url}": bilisim.ln_pic_url,
           "{x_pic_url}": bilisim.x_pic_url,
@@ -168,8 +110,7 @@
           "{line_url}": bilisim.line_pic_url,
         };
 
-        const sourceHtml = document.body.innerHTML;
-        let updatedHtml = sourceHtml;
+        let updatedHtml = document.body.innerHTML;
         Object.entries(map).forEach(([key, value]) => {
           updatedHtml = updatedHtml.replaceAll(key, value);
         });
@@ -179,88 +120,284 @@
   </head>
 
   <body>
-    <table class="signature-wrapper" cellpadding="0" cellspacing="0">
+    <table cellpadding="0" cellspacing="0" border="0" style="width: 450px">
       <tr>
-        <td>
+        <td style="width: 148px; vertical-align: top">
           <a href="logo link URL" target="_blank">
-            <img class="logo" src="{logo_url}" alt="Logo" />
+            <img
+              src="{logo_url}"
+              alt="Logo"
+              style="width: 148px; height: 148px; display: block"
+            />
           </a>
         </td>
-        <td style="text-align: center">
-          <img class="divider" src="{line_url}" alt="Divider" />
+        <td style="width: 13px; text-align: center; vertical-align: top">
+          <img
+            src="{line_url}"
+            alt="Divider"
+            style="width: 13px; height: 86px; display: block"
+          />
         </td>
-        <td class="content">
-
-          <div class="full-name">{first name} {last name} {prefix}</div>
-          <div class="title">{title}</div>
-
-          <div class="email-web">
-
-            <div>
-              <a href="mailto:{email}">
-              <img src="{email_pic_url}" class="icon-text" alt="Email" />
-              {email}</a>
-            </div>
-
-            <div>
-              <a href="http://{website}" target="_blank">
-              <img src="{web_pic_url}" class="icon-text icon-web" alt="Website" />
-              {website}</a>
-            </div>
-
+        <td
+          style="
+            width: 300px;
+            vertical-align: top;
+            padding-left: 10px;
+            color: #3c3c3b;
+            font-size: 10pt;
+          "
+        >
+          <div
+            style="
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                'Lucida Grande', 'Lucida Sans';
+              font-weight: bold;
+              font-size: 15pt;
+              line-height: 16px;
+              padding-bottom: 5px;
+            "
+          >
+            {first name} {last name} {prefix}
+          </div>
+          <div
+            style="
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                'Lucida Grande', 'Lucida Sans';
+              font-style: italic;
+              font-weight: normal;
+              font-size: 10pt;
+              line-height: 16px;
+              padding-bottom: 5px;
+            "
+          >
+            {title}
           </div>
 
-          <div class="contact">
-            <div>
-              <img src="{phn_pic_url}" class="icon-text icon-phone" alt="Phone" style="width: 18px; height: 18px;"/>
-              <span>{phone} | {mobile}</span>
-            </div>
-          </div>
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="
+              font-size: 9pt;
+              line-height: 14px;
+              padding-bottom: 3px;
+              color: #3c3c3b;
+            "
+          >
+            <tr>
+              <td
+                style="
+                  vertical-align: middle;
+                  padding-right: 6px;
+                  padding-bottom: 3px;
+                "
+              >
+                <a
+                  href="mailto:{email}"
+                  style="text-decoration: none; color: #3c3c3b"
+                  ><img
+                    src="{email_pic_url}"
+                    alt="Email"
+                    style="width: 20px; height: 20px; display: block"
+                /></a>
+              </td>
+              <td style="vertical-align: middle">
+                <a
+                  href="mailto:{email}"
+                  style="text-decoration: none; color: #1793d2"
+                  >{email}</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  vertical-align: middle;
+                  padding-right: 6px;
+                  padding-bottom: 3px;
+                "
+              >
+                <a
+                  href="http://{website}"
+                  target="_blank"
+                  style="text-decoration: none; color: #3c3c3b"
+                  ><img
+                    src="{web_pic_url}"
+                    alt="Website"
+                    style="width: 20px; height: 20px; display: block"
+                /></a>
+              </td>
+              <td style="vertical-align: middle">
+                <a
+                  href="http://{website}"
+                  target="_blank"
+                  style="text-decoration: none; color: #1793d2"
+                  >{website}</a
+                >
+              </td>
+            </tr>
+          </table>
 
-          <div class="address">
-            <div>
-              <a href="{lctn_url}" target="_blank">
-                <img src="{lctn_pic_url}" class="icon-text" alt="Address" />
-              </a>
-              <span>{address1}</span>
-            </div>
-            <div class="address-line address-indent">
-              <span>{address2}</span>
-            </div>
-          </div>
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="
+              font-size: 9pt;
+              line-height: 14px;
+              padding-bottom: 3px;
+              color: #3c3c3b;
+            "
+          >
+            <tr>
+              <td
+                style="
+                  vertical-align: middle;
+                  padding-left: 1px;
+                  padding-right: 6px;
+                  padding-bottom: 3px;
+                "
+              >
+                <img
+                  src="{phn_pic_url}"
+                  alt="Phone"
+                  style="width: 18px; height: 18px; display: block"
+                />
+              </td>
+              <td style="vertical-align: middle">
+                <span style="color: #3c3c3b">{phone} | {mobile}</span>
+              </td>
+            </tr>
+          </table>
 
-          <div class="social-icons">
-            <a href="{facebookURL}" target="_blank"
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="
+              font-size: 9pt;
+              line-height: 14px;
+              padding-bottom: 3px;
+              color: #3c3c3b;
+            "
+          >
+            <tr>
+              <td
+                style="
+                  vertical-align: middle;
+                  padding-right: 6px;
+                  padding-bottom: 3px;
+                "
+              >
+                <a
+                  href="{lctn_url}"
+                  target="_blank"
+                  style="text-decoration: none; color: #3c3c3b"
+                  ><img
+                    src="{lctn_pic_url}"
+                    alt="Address"
+                    style="width: 20px; height: 20px; display: block"
+                /></a>
+              </td>
+              <td style="vertical-align: middle">
+                <span style="color: #3c3c3b">{address1}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 26px">&nbsp;</td>
+              <td style="vertical-align: middle">
+                <span style="color: #3c3c3b">{address2}</span>
+              </td>
+            </tr>
+          </table>
+
+          <div style="padding-top: 15px">
+            <a
+              href="{facebookURL}"
+              target="_blank"
+              style="display: inline-block"
               ><img
                 src="{fb_pic_url}"
                 alt="Facebook"
-                style="width: 22px; height: 22px"
+                style="
+                  width: 22px;
+                  height: 22px;
+                  margin-right: 5px;
+                  display: block;
+                  float: left;
+                "
             /></a>
-            <a href="{linkedinURL}" target="_blank"
+            <a
+              href="{linkedinURL}"
+              target="_blank"
+              style="display: inline-block"
               ><img
                 src="{ln_pic_url}"
                 alt="LinkedIn"
-                style="width: 22px; height: 22px"
+                style="
+                  width: 22px;
+                  height: 22px;
+                  margin-right: 5px;
+                  display: block;
+                  float: left;
+                "
             /></a>
-            <a href="{twitterURL}" target="_blank"
+            <a href="{twitterURL}" target="_blank" style="display: inline-block"
               ><img
                 src="{x_pic_url}"
                 alt="Twitter"
-                style="width: 21px; height: 21px"
+                style="
+                  width: 21px;
+                  height: 21px;
+                  margin-right: 5px;
+                  display: block;
+                  float: left;
+                "
             /></a>
-            <a href="{youtubeURL}" target="_blank"
-              ><img src="{yt_pic_url}" alt="YouTube"
+            <a href="{youtubeURL}" target="_blank" style="display: inline-block"
+              ><img
+                src="{yt_pic_url}"
+                alt="YouTube"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 5px;
+                  display: block;
+                  float: left;
+                "
             /></a>
-            <a href="{instagramURL}" target="_blank"
-              ><img src="{it_pic_url}" alt="Instagram"
+            <a
+              href="{instagramURL}"
+              target="_blank"
+              style="display: inline-block"
+              ><img
+                src="{it_pic_url}"
+                alt="Instagram"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 5px;
+                  display: block;
+                  float: left;
+                "
             /></a>
+            <div style="clear: both"></div>
           </div>
         </td>
       </tr>
       <tr>
         <td colspan="3">
           <a href="banner link URL" target="_blank" rel="noopener">
-            <img class="banner" src="{banner_url}" alt="Banner" />
+            <img
+              src="{banner_url}"
+              alt="Banner"
+              style="
+                width: 430px;
+                height: auto;
+                margin-top: 16px;
+                display: block;
+              "
+            />
           </a>
         </td>
       </tr>
