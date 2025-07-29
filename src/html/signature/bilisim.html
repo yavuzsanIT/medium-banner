@@ -77,12 +77,37 @@
         padding-bottom: 3px;
       }
 
+      .email-web,
+      .contact,
+      .address {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .email-web > div,
+      .contact > div,
+      .address > div {
+        display: flex;
+        align-items: center;
+      }
+
+      .address-line {
+        display: flex;
+        align-items: center;
+      }
+
+      .address-indent {
+        padding-left: 26px; /* İkon + margin-right kadar boşluk */
+      }
+
       .icon-text {
+        width: 20px;
+        height: 20px;
         vertical-align: middle;
-        height: 18px;
-        width: 18px;
-        margin-right: 4px;
-        padding-bottom: 5px;
+        margin-right: 6px;
+        margin-bottom: 2px; /* ikonlar yazıya daha yakın dursun */
+        object-fit: contain; /* orantılı boyut */
       }
 
       /* === Sosyal Medya === */
@@ -164,29 +189,51 @@
           <div class="full-name">{first name} {last name} {prefix}</div>
           <div class="title">{title}</div>
           <div class="email-web">
-            <img src="{email_svg_url}" class="icon-text" alt="Email" />
-            <a href="mailto:{email}">{email}</a><br />
-            <img src="{web_svg_url}" class="icon-text" alt="Website" />
-            <a href="http://{website}" target="_blank">{website}</a>
+            <div>
+              <img src="{email_svg_url}" class="icon-text" alt="Email" />
+              <a href="mailto:{email}">{email}</a>
+            </div>
+            <div>
+              <img src="{web_svg_url}" class="icon-text icon-web" alt="Website" />
+              <a href="http://{website}" target="_blank">{website}</a>
+            </div>
           </div>
+
           <div class="contact">
-            <img src="{phn_svg_url}" class="icon-text" alt="Phone" style="width: 16px; height: 16px;"/>{phone} |
-            {mobile}
+            <div>
+              <img src="{phn_svg_url}" class="icon-text icon-phone" alt="Phone" />
+              <span>{phone} | {mobile}</span>
+            </div>
           </div>
+
           <div class="address">
-            <img src="{lctn_svg_url}" class="icon-text" alt="Address" />
-            {address1}<br />
-            {address2}
+            <div>
+              <img src="{lctn_svg_url}" class="icon-text" alt="Address" />
+              <span>{address1}</span>
+            </div>
+            <div class="address-line address-indent">
+              <span>{address2}</span>
+            </div>
           </div>
+
           <div class="social-icons">
-            <a href="{facebookURL}" target="_blank" 
-              ><img src="{fb_svg_url}" alt="Facebook" style="width: 22px; height: 22px;"
+            <a href="{facebookURL}" target="_blank"
+              ><img
+                src="{fb_svg_url}"
+                alt="Facebook"
+                style="width: 22px; height: 22px"
             /></a>
             <a href="{linkedinURL}" target="_blank"
-              ><img src="{ln_svg_url}" alt="LinkedIn" style="width: 22px; height: 22px;"
+              ><img
+                src="{ln_svg_url}"
+                alt="LinkedIn"
+                style="width: 22px; height: 22px"
             /></a>
             <a href="{twitterURL}" target="_blank"
-              ><img src="{x_svg_url}" alt="Twitter" style="width: 21px; height: 21px;"
+              ><img
+                src="{x_svg_url}"
+                alt="Twitter"
+                style="width: 21px; height: 21px"
             /></a>
             <a href="{youtubeURL}" target="_blank"
               ><img src="{yt_svg_url}" alt="YouTube"
@@ -194,7 +241,6 @@
             <a href="{instagramURL}" target="_blank"
               ><img src="{it_svg_url}" alt="Instagram"
             /></a>
-            
           </div>
         </td>
       </tr>
